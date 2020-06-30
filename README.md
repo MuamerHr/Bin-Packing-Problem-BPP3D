@@ -19,10 +19,10 @@ such that:
 1) All small items are packed into a minimum number of bins
 2) No two items overlap.
 
-The algorithm solves the problem for orthogonal packing, which means the items are packed such that*/
-the edges of the small items are parallel to the correspoding bin edge.
-No rotations of items or bins are allowed.
-The algorithm is capable to solve the problem for general packings and robot packings.
+The algorithm solves the problem for orthogonal packings, which means the items are packed,
+such that the edges of the small items are parallel to the correspoding bin edge.
+No rotations of items or bins are allowed. The algorithm is capable to solve the problem 
+for general packings and robot packings.
 
 For a detailed description of the algorithm and original C-Code refer to:
 
