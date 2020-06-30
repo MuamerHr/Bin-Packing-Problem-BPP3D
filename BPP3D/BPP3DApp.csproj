@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>BPP3DApp</AssemblyName>
+    <RootNamespace>BPP3DApp</RootNamespace>
+    <Authors>Muamer Hrncic</Authors>
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <StartupObject>BPP3DApp.Program</StartupObject>
+    <AssemblyOriginatorKeyFile>viza.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>true</Optimize>
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Created Instances\Results\BPP3D\**" />
+    <EmbeddedResource Remove="Created Instances\Results\BPP3D\**" />
+    <None Remove="Created Instances\Results\BPP3D\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BPP3DLib\BPP3DLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Created Instances\Instances\" />
+  </ItemGroup>
+
+</Project>
