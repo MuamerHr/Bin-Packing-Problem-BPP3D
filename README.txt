@@ -95,5 +95,5 @@ bin packing problem." ACM Trans. Math. Softw., 33:7, 01
 ##################################################################################################
 
 This C# code is a reimplementation of the original C-Code provided
-by Daniel Pisinger at http://hjemmesider.diku.dk/~pisinger/codes.html.
+by David Pisinger at http://hjemmesider.diku.dk/~pisinger/codes.html.
 The code comes with no warranty.
