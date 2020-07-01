@@ -37,29 +37,43 @@ and results of the executed algorithm.
 
 The parameter description is the following
 int n	...			Amount of small items
+
 int W...			Width of the bin
+
 int H...			Height of the bin
+
 int D...			Depth of the bin
+
 int[] w...			Widths of the small items
+
 int[] h...			Heights of the small items
+
 int[] d...			Depths of the small items
+
 int[] x...			Resulting x-coordinates of the small items
+
 int[] y...			Resulting y-coordinates of the small items
+
 int[] z...			Resulting z-coordinates of the small items
+
 int[] bno...		Resulting bin number of the small items
+
 int nodeLimit...	Limit for  number of exploration nodes in the outer branching scheme.
 					If set to zero, the algorithm tries to find an optimal
 					solution, or terminates if "iterLimit" or "timeLimit" is reached.
 					"nodeLimit" is a multiple of thousand, e.g. if nodeLimit=1000,
 					the explores at most "nodeLimit * IUnit" nodes (IUnit = 1000).
+					
 int iterLimit...	Limit for number of iterations in the inner branching schemes.
 					If set to zero, the algorithm tries to find an optimal
 					solution, or terminates if "nodeLimit" or "timeLimit" is reached.
 					"iterLimit" is a multiple of thousand, e.g. if iterLimit=1000,
 					the explores at most "iterLimit * IUnit" nodes (IUnit = 1000).
+					
 int timeLimit...	Time limit for algorithm. If set to zero, the algorithm tries to find an optimal
 					solution, or terminates if "nodeLimit" or "iterLimit" is reached.
-					If the timelimit is reached the algorithm return a heuristic solution.				
+					If the timelimit is reached the algorithm return a heuristic solution.	
+					
 int packingType...	If set to "0" the algorithm tries to find an optimal solution
 					using general packing patterns.
 					If set to "1" the algorithm tries to find an optimal solution
