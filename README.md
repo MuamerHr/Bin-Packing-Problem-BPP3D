@@ -6,7 +6,7 @@ one, two, or three dimensions.
 The three dimensional bin packing problem belongs to the 
 class of NP complete problems and can be formulated as follows:
 
-Let be J={1,...,n} a set of small rectangular items with dimensions w_i,h_i,d_i.
+Let be J={1,...,n} a set of small rectangular items with dimensions w_i, h_i, d_i.
 All small items must be packed into bins of dimensions W,H,D.
 All dimensions are positive integers and the dimensions of the small
 items are smaller than or equal to the corresponding bin dimensions. 
@@ -17,7 +17,7 @@ such that:
 1) All small items are packed into a minimum number of bins
 2) No two items overlap.
 
-The algorithm solves the problem for orthogonal packings, which means the items are packed,
+This algorithm solves the problem for orthogonal packings, which means the items are packed,
 such that the edges of the small items are parallel to the correspoding bin edge.
 No rotations of items or bins are allowed. The algorithm is capable to solve the problem 
 for general packings and robot packings.
