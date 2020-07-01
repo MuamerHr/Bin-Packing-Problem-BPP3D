@@ -1,7 +1,5 @@
 # BPP3D-Bin-Packing-Problem
 
-BPP3D-Bin-Packing-Problem
-
 This repository contains procedures to solve the bin packing problem for 
 one, two, or three dimensions.
 
