@@ -1,8 +1,5 @@
 # BPP3D-Bin-Packing-Problem
 
-This repository contains procedures to solve the bin packing problem for 
-one, two, or three dimensions.
-
 A typical application where the three dimensional bin packing problem occurs 
 is the loading of packages onto containers. The  problem belongs to the 
 class of NP complete problems and can be formulated as follows:
