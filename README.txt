@@ -3,10 +3,11 @@
 This repository contains procedures to solve the bin packing problem for 
 one, two, or three dimensions.
 
-The three dimensional bin packing problem belongs to the 
+A typical application where the three dimensional bin packing problem occurs 
+is the loading of packages onto containers. The  problem belongs to the 
 class of NP complete problems and can be formulated as follows:
 
-Let be J={1,...,n} a set of small rectangular items with dimensions w_i, h_i, d_i.
+Let be J={1,...,n} a set of small rectangular-shaped items with dimensions w_i, h_i, d_i.
 All small items must be packed into bins of dimensions W,H,D.
 All dimensions are positive integers and the dimensions of the small
 items are smaller than or equal to the corresponding bin dimensions. 
@@ -14,7 +15,7 @@ items are smaller than or equal to the corresponding bin dimensions.
 The task is to pack all the small items, 
 such that:
 
-1) All small items are packed into a minimum number of bins
+1) All small items are packed into a minimum number of bins.
 2) No two items overlap.
 
 ##################################################################################################
@@ -26,7 +27,7 @@ for general packings and robot packings.
 
 The algorithm is a combination of two branch and bound schemes where:
 - the outer branching scheme assigns small items to bins without specifying the actual positions
-- the inner branching scheme packs a given subset of items into one bin depending on the chosen
+- the inner branching scheme attempts to pack a given subset of items into one bin depending on the chosen
 packing pattern (general, robot).
 
 ##################################################################################################
@@ -61,23 +62,23 @@ int[] bno...		Resulting bin number of the small items
 int nodeLimit...	Limit for  number of exploration nodes in the outer branching scheme.
 					If set to zero, the algorithm tries to find an optimal
 					solution, or terminates if "iterLimit" or "timeLimit" is reached.
-					"nodeLimit" is a multiple of thousand, e.g. if nodeLimit=1000,
-					the explores at most "nodeLimit * IUnit" nodes (IUnit = 1000).
+					"nodeLimit" is treated as a multiple of one thousand, e.g. if nodeLimit = 1000,
+					the algorithm explores at most "nodeLimit * IUnit" nodes (IUnit = 1000).
 					
 int iterLimit...	Limit for number of iterations in the inner branching schemes.
 					If set to zero, the algorithm tries to find an optimal
 					solution, or terminates if "nodeLimit" or "timeLimit" is reached.
-					"iterLimit" is a multiple of thousand, e.g. if iterLimit=1000,
-					the explores at most "iterLimit * IUnit" nodes (IUnit = 1000).
+					"iterLimit" is treated as a multiple of one thousand, e.g. if iterLimit = 1000,
+					the algorithm performs at most "iterLimit * IUnit" nodes (IUnit = 1000).
 					
-int timeLimit...	Time limit for algorithm. If set to zero, the algorithm tries to find an optimal
+int timeLimit...	Time limit for the algorithm. If set to zero, the algorithm tries to find an optimal
 					solution, or terminates if "nodeLimit" or "iterLimit" is reached.
 					If the timelimit is reached the algorithm return a heuristic solution.	
 					
-int packingType...	If set to "0" the algorithm tries to find an optimal solution
+int packingType...	If set to zero the algorithm tries to find an optimal solution
 					using general packing patterns.
-					If set to "1" the algorithm tries to find an optimal solution
-					using robot packing pattern.
+					If set to one the algorithm tries to find an optimal solution
+					using robot packing patterns.
 
 ##################################################################################################
 
